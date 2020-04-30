@@ -1,5 +1,7 @@
 powerapps/dynamics365适用的注释预览/批量下载组件
 
+**自定义组件为预览功能**
+
 原生预览支持的文件类型:图像,zip,音频,pdf
 
 使用浏览器预览支持:音频,视频,图像,pdf,文本,xml,json等,理论上只需要浏览器支持打开的文件类型,均可预览
@@ -31,5 +33,7 @@ powerapps/dynamics365适用的注释预览/批量下载组件
   6.通过下载按钮下载一个或多个注释文件,输出文件为zip
   
   ![Image text](https://github.com/QNMF1234/AttachmentView/blob/master/%E6%95%99%E7%A8%8B%E5%9B%BE%E5%83%8F/4.png)
+  
+ **尚不支持xlsx,ppt文件**
 
 使用的库:pdfjs-dist,jszip,file-saver

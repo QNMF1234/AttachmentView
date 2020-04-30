@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="AttachmentView" constructor="AttachmentView" version="0.0.1" display-name-key="AttachmentView" description-key="AttachmentView description" control-type="standard">
+    <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="BrowserView" display-name-key="BrowserView" description-key="是否使用浏览器预览附件True/False" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="PDFjsurl" display-name-key="PDFjsurl" description-key="预览PDF必须文件url" of-type="SingleLine.Text" usage="input" required="true" />
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="css/style.css" order="1"/>
+    </resources>
+    <feature-usage>
+    <uses-feature name="WebAPI" required="true" />
+  </feature-usage>
+  </control>
+</manifest>

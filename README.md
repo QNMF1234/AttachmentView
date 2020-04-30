@@ -10,7 +10,15 @@ powerapps/dynamics365适用的注释预览/批量下载组件
   
   2.在经典窗体选择文本类型字段->点击属性->控件->添加控件,选择AttachmentView
   
-  3.
+   ![Image text](https://github.com/QNMF1234/AttachmentView/blob/master/%E6%95%99%E7%A8%8B%E5%9B%BE%E5%83%8F/1.png)
   
+   属性1:为绑定的字段
+  
+   属性2:指示是否优先使用浏览器来查看附件,当浏览器有不支持的类型附件再尝试内置库预览
+  
+   属性3:填写预览pdf的必须配置文件,需要手动上传至CRM填写web资源url
+  
+  3.保存后发布,建议强制刷新窗体页浏览器缓存
+
 
 使用的库:pdfjs-dist,jszip,file-saver

@@ -416,10 +416,15 @@ export class AttachmentView implements ComponentFramework.StandardControl<IInput
 				//控制进度条宽度
 				this._ing.style.width = ((index + 1) / count * 100).toString() + "%";
 				//等待异步请求完全加载
-			    await this.Getbase64(index).then((json)=>{
-					Zip.file(json["filename"], json["documentbody"], { base64: true });
-				},
-				(error)=>{alert(error)})
+				await this._context.webAPI.retrieveRecord("annotation", this._doarr[index], "?$select=documentbody,filename").then(
+					//成功时
+					(json) => {
+						//添加文件						
+						Zip.file(json["filename"], json["documentbody"], { base64: true });
+					}
+					//失败时
+					,(error)=>{console.log(error);alert("文件:"+this._doarr[index]+"下载失败,无法找到注释记录")}
+				)
 				if (index+1 == count){this.OK(Zip)}
 			}
 		}
@@ -436,21 +441,6 @@ export class AttachmentView implements ComponentFramework.StandardControl<IInput
 			(err) => { alert("创建zip文件时出错"); console.log(err) }
 		)
 	}
-	//异步请求
-	public async Getbase64(index: number): Promise<ComponentFramework.WebApi.Entity> {
-		let promise: Promise<ComponentFramework.WebApi.Entity> = new Promise((resolve,reject) => {
-			this._context.webAPI.retrieveRecord("annotation", this._doarr[index], "?$select=documentbody,filename").then(
-				//成功时
-				(json) => {
-					//添加文件						
-					resolve(json)
-				}
-				//失败时
-				,(error)=>{reject("文件:"+this._doarr[index]+"下载失败,无法找到注释记录")}
-			)
-		})
-		return promise;
-	}
 	//使用浏览器预览
 	public async BrowserView(Guid:string){
 		//显示进度条
@@ -459,10 +449,10 @@ export class AttachmentView implements ComponentFramework.StandardControl<IInput
 		await this._context.webAPI.retrieveRecord("annotation", Guid, "?$select=documentbody,mimetype").then(
 			//成功时
 			(json) => {
-					this._ing.style.width="80%"
-					var byteString = atob(json["documentbody"]); //base64 解码
-					var arrayBuffer = new ArrayBuffer(byteString.length); //创建缓冲数组
-					var intArray = new Uint8Array(arrayBuffer); //创建视图
+					//解码
+					var byteString = atob(json["documentbody"]); 
+					var arrayBuffer = new ArrayBuffer(byteString.length);
+					var intArray = new Uint8Array(arrayBuffer);
 					
 					for (var i = 0; i < byteString.length; i++) {
 						intArray[i] = byteString.charCodeAt(i);

@@ -30,5 +30,6 @@ powerapps/dynamics365适用的注释预览/批量下载组件
   
   6.通过下载按钮下载一个或多个注释文件,输出文件为zip
   
+  ![Image text](https://github.com/QNMF1234/AttachmentView/blob/master/%E6%95%99%E7%A8%8B%E5%9B%BE%E5%83%8F/4.png)
 
 使用的库:pdfjs-dist,jszip,file-saver

@@ -21,6 +21,8 @@ powerapps/dynamics365适用的注释预览/批量下载组件
    属性2:指示是否优先(True)使用浏览器来查看附件,当浏览器有不支持的类型附件再尝试内置库预览
   
    属性3:填写预览pdf的必须配置文件,需要手动上传至CRM填写web资源url
+   
+    必需的文件url:https://github.com/QNMF1234/AttachmentView/blob/master/AttachmentView/pdf.worker.js
   
   3.保存后发布,建议强制刷新窗体页浏览器缓存
   

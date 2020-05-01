@@ -1,3 +1,9 @@
+微信公众号:
+
+ ![Image text](https://github.com/QNMF1234/AttachmentView/blob/master/%E6%95%99%E7%A8%8B%E5%9B%BE%E5%83%8F/qrcode_for_gh_1c7a32a02da8_258.jpg)
+
+
+
 powerapps/dynamics365适用的注释预览/批量下载组件
 
 **自定义组件为预览功能**

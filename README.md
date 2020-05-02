@@ -43,7 +43,11 @@ powerapps/dynamics365适用的注释预览/批量下载组件
   6.通过下载按钮下载一个或多个注释文件,输出文件为zip
   
   ![Image text](https://github.com/QNMF1234/AttachmentView/blob/master/%E6%95%99%E7%A8%8B%E5%9B%BE%E5%83%8F/4.png)
+  其他截图:
   
+  ![Image text](https://github.com/QNMF1234/AttachmentView/blob/master/%E6%95%99%E7%A8%8B%E5%9B%BE%E5%83%8F/pdf%E9%A2%84%E8%A7%88.png)
+  
+  ![Image text](https://github.com/QNMF1234/AttachmentView/blob/master/%E6%95%99%E7%A8%8B%E5%9B%BE%E5%83%8F/%E9%9F%B3%E9%A2%91%E9%A2%84%E8%A7%88.png)
  **尚不支持xlsx,ppt文件**
  **只在Edge与谷歌浏览器平台测试**
 
